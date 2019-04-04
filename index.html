@@ -1,406 +1,237 @@
-<!DOCTYPE HTML>
-<HTML>
+<!DOCTYPE html>
+<html lang="en">
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
+<body>
 
-S<h1>JavaScript Calculator</h1>
-<p class="warning">Don't divide by zero</p>
-
-<div id="calculator" class="calculator">
-
-  <button id="clear" class="clear">C</button>
-
-  <div id="viewer" class="viewer">0</div>
-
-  <button class="num" data-num="7">7</button>
-  <button class="num" data-num="8">8</button>
-  <button class="num" data-num="9">9</button>
-  <button data-ops="plus" class="ops">+</button>
-
-  <button class="num" data-num="4">4</button>
-  <button class="num" data-num="5">5</button>
-  <button class="num" data-num="6">6</button>
-  <button data-ops="minus" class="ops">-</button>
-
-  <button class="num" data-num="1">1</button>
-  <button class="num" data-num="2">2</button>
-  <button class="num" data-num="3">3</button>
-  <button data-ops="times" class="ops">*</button>
-
-  <button class="num" data-num="0">0</button>
-  <button class="num" data-num=".">.</button>
-  <button id="equals" class="equals" data-result="">=</button>
-  <button data-ops="divided by" class="ops">/</button>
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">BAND</a>
+    <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TOUR</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="#" class="w3-bar-item w3-button">Merchandise</a>
+        <a href="#" class="w3-bar-item w3-button">Extras</a>
+        <a href="#" class="w3-bar-item w3-button">Media</a>
+      </div>
+    </div>
+    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+  </div>
 </div>
 
-<button id="reset" class="reset">Reset Universe?</button>
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">BAND</a>
+  <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TOUR</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>
+</div>
 
-</HTML>
-<STYLE> 
-	​html {
-	  background: #100a1c;
-	  background-image:
-		radial-gradient(50% 30% ellipse at center top, #201e40 0%, rgba(0,0,0,0) 100%),
-		radial-gradient(60% 50% ellipse at center bottom, #261226 0%, #100a1c 100%);
-	  background-attachment: fixed;
-	  color: #6cacc5;
-	}
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
 
-	body {
-	  color: #6cacc5;
-	  font: 300 18px/1.6 "Source Sans Pro",sans-serif;
-	  margin: 0;
-	  padding: 5em 0 2em;
-	  text-align: center;
-	}
+  <!-- Automatic Slideshow Images -->
+  <div class="mySlides w3-display-container w3-center">
+    <img src="/w3images/la.jpg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>Los Angeles</h3>
+      <p><b>We had the best time playing at Venice Beach!</b></p>   
+    </div>
+  </div>
+  <div class="mySlides w3-display-container w3-center">
+    <img src="/w3images/ny.jpg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>New York</h3>
+      <p><b>The atmosphere in New York is lorem ipsum.</b></p>    
+    </div>
+  </div>
+  <div class="mySlides w3-display-container w3-center">
+    <img src="/w3images/chicago.jpg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>Chicago</h3>
+      <p><b>Thank you, Chicago - A night we won't forget.</b></p>    
+    </div>
+  </div>
 
-	h1 {
-	  font-weight: 300;
-	  margin: 0;
-	}
+  <!-- The Band Section -->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+    <h2 class="w3-wide">THE BAND</h2>
+    <p class="w3-opacity"><i>We love music</i></p>
+    <p class="w3-justify">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+      ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur
+      adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <div class="w3-row w3-padding-32">
+      <div class="w3-third">
+        <p>Name</p>
+        <img src="/w3images/bandmember.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+      </div>
+      <div class="w3-third">
+        <p>Name</p>
+        <img src="/w3images/bandmember.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+      </div>
+      <div class="w3-third">
+        <p>Name</p>
+        <img src="/w3images/bandmember.jpg" class="w3-round" alt="Random Name" style="width:60%">
+      </div>
+    </div>
+  </div>
 
-	/* Gradient text only on Webkit */
-	.warning {
-	  background: -webkit-linear-gradient(45deg,  #c97874 10%, #463042 90%);
-	  -webkit-background-clip: text;
-	  -webkit-text-fill-color: transparent;
-	  color: #8c5059;
-	  font-weight: 400;
-	  margin: 0 auto 6em;
-	  max-width: 9em;
-	}
+  <!-- The Tour Section -->
+  <div class="w3-black" id="tour">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+      <h2 class="w3-wide w3-center">TOUR DATES</h2>
+      <p class="w3-opacity w3-center"><i>Remember to book your tickets!</i></p><br>
 
-	.calculator {
-	  font-size: 28px;
-	  margin: 0 auto;
-	  width: 10em;
-	  
-	  &::before,
-	  &::after {
-		content: " ";
-		display: table;
-	  }
-	  
-	  &::after {
-		clear: both;
-	  }
-	}
+      <ul class="w3-ul w3-border w3-white w3-text-grey">
+        <li class="w3-padding">September <span class="w3-tag w3-red w3-margin-left">Sold out</span></li>
+        <li class="w3-padding">October <span class="w3-tag w3-red w3-margin-left">Sold out</span></li>
+        <li class="w3-padding">November <span class="w3-badge w3-right w3-margin-right">3</span></li>
+      </ul>
 
-	/* Calculator after dividing by zero */
-	.broken {
-	  animation: broken 2s;
-	  transform: translate3d(0,-2000px,0);
-	  opacity: 0;
-	}
+      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+        <div class="w3-third w3-margin-bottom">
+          <img src="/w3images/newyork.jpg" alt="New York" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>New York</b></p>
+            <p class="w3-opacity">Fri 27 Nov 2016</p>
+            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="/w3images/paris.jpg" alt="Paris" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>Paris</b></p>
+            <p class="w3-opacity">Sat 28 Nov 2016</p>
+            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="/w3images/sanfran.jpg" alt="San Francisco" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>San Francisco</b></p>
+            <p class="w3-opacity">Sun 29 Nov 2016</p>
+            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-	.viewer {
-	  color: #c97874;
-	  float: left;
-	  line-height: 3em;
-	  text-align: right;
-	  text-overflow: ellipsis;
-	  overflow: hidden;
-	  width: 7.5em;
-	  height: 3em;
-	}
+  <!-- Ticket Modal -->
+  <div id="ticketModal" class="w3-modal">
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+      <header class="w3-container w3-teal w3-center w3-padding-32"> 
+        <span onclick="document.getElementById('ticketModal').style.display='none'" 
+       class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
+        <h2 class="w3-wide"><i class="fa fa-suitcase w3-margin-right"></i>Tickets</h2>
+      </header>
+      <div class="w3-container">
+        <p><label><i class="fa fa-shopping-cart"></i> Tickets, $15 per person</label></p>
+        <input class="w3-input w3-border" type="text" placeholder="How many?">
+        <p><label><i class="fa fa-user"></i> Send To</label></p>
+        <input class="w3-input w3-border" type="text" placeholder="Enter email">
+        <button class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right">PAY <i class="fa fa-check"></i></button>
+        <button class="w3-button w3-red w3-section" onclick="document.getElementById('ticketModal').style.display='none'">Close <i class="fa fa-remove"></i></button>
+        <p class="w3-right">Need <a href="#" class="w3-text-blue">help?</a></p>
+      </div>
+    </div>
+  </div>
 
-	button {
-	  border: 0;
-	  background: rgba(42,50,113, .28);
-	  color: #6cacc5;
-	  cursor: pointer;
-	  float: left;
-	  font: inherit;
-	  margin: 0.25em;
-	  width: 2em;
-	  height: 2em;
-	  transition: all 0.5s;
-	  
-	  &:hover {
-		background: #201e40;
-	  }
-	  
-	  &:focus {
-		outline: 0; // Better check accessibility
+  <!-- The Contact Section -->
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+    <h2 class="w3-wide w3-center">CONTACT</h2>
+    <p class="w3-opacity w3-center"><i>Fan? Drop a note!</i></p>
+    <div class="w3-row w3-padding-32">
+      <div class="w3-col m6 w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker" style="width:30px"></i> Chicago, US<br>
+        <i class="fa fa-phone" style="width:30px"></i> Phone: +00 151515<br>
+        <i class="fa fa-envelope" style="width:30px"> </i> Email: mail@mail.com<br>
+      </div>
+      <div class="w3-col m6">
+        <form action="/action_page.php" target="_blank">
+          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+            </div>
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+            </div>
+          </div>
+          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+          <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+<!-- End Page Content -->
+</div>
 
-		/* The value fade-ins that appear */
-		&::after {
-		  animation: zoom 1s;
-		  animation-iteration-count: 1;
-		  animation-fill-mode: both; // Fix Firefox from firing animations only once
-		  content: attr(data-num);
-		  cursor: default;
-		  font-size: 100px;
-		  position: absolute;
-			   top: 1.5em;
-			   left: 50%;
-		  text-align: center;
-		  margin-left: -24px;
-		  opacity: 0;
-		  width: 48px;    
-		}
-	  }
-	}
+<!-- Image of location/map -->
+<img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
 
-	/* Same as above, modified for operators */
-	.ops:focus::after {
-	  content: attr(data-ops);
-	  margin-left: -210px;
-	  width: 420px;
-	}
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
 
-	/* Same as above, modified for result */
-	.equals:focus::after {
-	  content: attr(data-result);
-	  margin-left: -300px;
-	  width: 600px;
-	}
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
 
-	/* Reset button */
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
+}
 
-	.reset {
-	  background: rgba(201,120,116,.28);
-	  color:#c97874;
-	  font-weight: 400;
-	  margin-left: -77px;
-	  padding: 0.5em 1em;
-	  position: absolute;
-		top: -20em;
-		left: 50%;
-	  width: auto;
-	  height: auto;
-	  
-	  &:hover {
-		background: #c97874;
-		color: #100a1c;    
-	  }
-	  
-	  /* When button is revealed */
-	  &.show {
-		top: 20em;
-		animation: fadein 4s;
-	  }
-	}
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
 
-	/* Animations */
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
 
-	/* Values that appear onclick */
-	@keyframes zoom {
-	  0% { 
-		transform: scale(.2); 
-		opacity: 1;
-	  }
-	  
-	  70% { 
-		transform: scale(1); 
-	  }
-	  
-	  100% { 
-		opacity: 0;
-	  }
-	}
-
-	/* Division by zero animation */
-	@keyframes broken {
-	  0% {
-		transform: translate3d(0,0,0);
-		opacity: 1;
-	  }
-
-	  5% {
-		transform: rotate(5deg);
-	  }
-
-	  15% {
-		transform: rotate(-5deg);
-	  }
-
-	  20% {
-		transform: rotate(5deg);
-	  }
-
-	  25% {
-		transform: rotate(-5deg);
-	  }
-
-	  50% {
-		transform: rotate(45deg);
-	  }
-
-	  70% {
-		transform: translate3d(0,2000px,0);
-		opacity: 1;
-	  }
-
-	  75% {
-		opacity: 0;
-	  }
-
-	  100% {
-		transform: translate3d(0,-2000px,0);
-	  }
-	}
-
-	/* Reset button fadein */
-	@keyframes fadein {
-	  0% {
-		top: 20em;
-		opacity: 0;
-	  }
-	  
-	  50% {
-		opacity: 0;
-	  }
-	  
-	  100% {
-		opacity: 1;
-	  }
-	}
-
-	@media (min-width: 420px) {
-	  .calculator {
-		width: 12em;
-	  }
-	  .viewer {
-		width: 8.5em;
-	  }
-	  button {
-		margin: 0.5em;
-	  }
-	}
-</STYLE> 
-
-<SCRIPT>
-	/*
-	TODO:
-		Limit number input
-		Disallow . from being entered multiple times
-		Clean up structure
-	*/
-
-	(function() {
-	  "use strict";
-
-	  // Shortcut to get elements
-	  var el = function(element) {
-		if (element.charAt(0) === "#") { // If passed an ID...
-		  return document.querySelector(element); // ... returns single element
-		}
-
-		return document.querySelectorAll(element); // Otherwise, returns a nodelist
-	  };
-
-	  // Variables
-	  var viewer = el("#viewer"), // Calculator screen where result is displayed
-		equals = el("#equals"), // Equal button
-		nums = el(".num"), // List of numbers
-		ops = el(".ops"), // List of operators
-		theNum = "", // Current number
-		oldNum = "", // First number
-		resultNum, // Result
-		operator; // Batman
-
-	  // When: Number is clicked. Get the current number selected
-	  var setNum = function() {
-		if (resultNum) { // If a result was displayed, reset number
-		  theNum = this.getAttribute("data-num");
-		  resultNum = "";
-		} else { // Otherwise, add digit to previous number (this is a string!)
-		  theNum += this.getAttribute("data-num");
-		}
-
-		viewer.innerHTML = theNum; // Display current number
-
-	  };
-
-	  // When: Operator is clicked. Pass number to oldNum and save operator
-	  var moveNum = function() {
-		oldNum = theNum;
-		theNum = "";
-		operator = this.getAttribute("data-ops");
-
-		equals.setAttribute("data-result", ""); // Reset result in attr
-	  };
-
-	  // When: Equals is clicked. Calculate result
-	  var displayNum = function() {
-
-		// Convert string input to numbers
-		oldNum = parseFloat(oldNum);
-		theNum = parseFloat(theNum);
-
-		// Perform operation
-		switch (operator) {
-		  case "plus":
-			resultNum = oldNum + theNum;
-			break;
-
-		  case "minus":
-			resultNum = oldNum - theNum;
-			break;
-
-		  case "times":
-			resultNum = oldNum * theNum;
-			break;
-
-		  case "divided by":
-			resultNum = oldNum / theNum;
-			break;
-
-			// If equal is pressed without an operator, keep number and continue
-		  default:
-			resultNum = theNum;
-		}
-
-		// If NaN or Infinity returned
-		if (!isFinite(resultNum)) {
-		  if (isNaN(resultNum)) { // If result is not a number; set off by, eg, double-clicking operators
-			resultNum = "You broke it!";
-		  } else { // If result is infinity, set off by dividing by zero
-			resultNum = "Look at what you've done";
-			el('#calculator').classList.add("broken"); // Break calculator
-			el('#reset').classList.add("show"); // And show reset button
-		  }
-		}
-
-		// Display result, finally!
-		viewer.innerHTML = resultNum;
-		equals.setAttribute("data-result", resultNum);
-
-		// Now reset oldNum & keep result
-		oldNum = 0;
-		theNum = resultNum;
-
-	  };
-
-	  // When: Clear button is pressed. Clear everything
-	  var clearAll = function() {
-		oldNum = "";
-		theNum = "";
-		viewer.innerHTML = "0";
-		equals.setAttribute("data-result", resultNum);
-	  };
-
-	  /* The click events */
-
-	  // Add click event to numbers
-	  for (var i = 0, l = nums.length; i < l; i++) {
-		nums[i].onclick = setNum;
-	  }
-
-	  // Add click event to operators
-	  for (var i = 0, l = ops.length; i < l; i++) {
-		ops[i].onclick = moveNum;
-	  }
-
-	  // Add click event to equal sign
-	  equals.onclick = displayNum;
-
-	  // Add click event to clear button
-	  el("#clear").onclick = clearAll;
-
-	  // Add click event to reset button
-	  el("#reset").onclick = function() {
-		window.location = window.location;
-	  };
-
-	}());
-</SCRIPT> 
+</body>
+</html>
